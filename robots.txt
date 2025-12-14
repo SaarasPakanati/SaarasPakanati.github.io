@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://SaarasPakanati.github.io/al-folio/sitemap.xml
+Sitemap: https://SaarasPakanati.github.io/sitemap.xml
