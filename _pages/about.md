@@ -31,7 +31,7 @@ I am currently interested in exploring computational fluid dynamics and numerica
 
 Feel free to reach out over [LinkedIn](https://www.linkedin.com/in/saaras-pakanati/) or [Email](mailto:pakanass@mail.uc.edu)!
 
-A PDF of my CV is available [here](/assets/pdf/example_pdf.pdf‎).
+A PDF of my CV is available [here](/assets/pdf/Saaras_Pakanati_CV121925.pdf‎).
 
 
 
