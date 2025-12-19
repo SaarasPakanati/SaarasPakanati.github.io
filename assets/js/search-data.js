@@ -37,11 +37,11 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-inital-commit",
+            },{id: "post-initial-commit-my-new-website",
         
-          title: "Inital Commit",
+          title: "Initial Commit - My new website!",
         
-        description: "",
+        description: "My first post",
         section: "Posts",
         handler: () => {
           
