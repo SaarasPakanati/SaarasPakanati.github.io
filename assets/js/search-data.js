@@ -37,7 +37,18 @@ ninja.data = [{
               handler: () => {
                 window.location.href = "/blog/";
               },
-            },{id: "post-a-post-with-formatting-and-links",
+            },{id: "post-inital-commit",
+        
+          title: "Inital Commit",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/inital-commit/";
+          
+        },
+      },{id: "post-a-post-with-formatting-and-links",
         
           title: "a post with formatting and links",
         
