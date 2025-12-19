@@ -3,7 +3,7 @@ layout: post
 title: Initial Commit - My new website!
 date: 2025-12-19 12:28:16
 description: My first post
-tags: formatting links
+tags: random news announcement
 categories: Firsts
 ---
 
