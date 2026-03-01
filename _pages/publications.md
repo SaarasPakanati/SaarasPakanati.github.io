@@ -2,10 +2,11 @@
 layout: page
 permalink: /publications/
 title: publications
-description: Please refer to my <a href="https://scholar.google.com/citations?user=N44aHPUAAAAJ&hl=en&oi=ao">Google Scholar</a> for an up-to-date publications list.
 nav: true
 nav_order: 2
 ---
+
+Please refer to my <a href="https://scholar.google.com/citations?user=N44aHPUAAAAJ&hl=en&oi=ao">Google Scholar</a> for an up-to-date publications list.
 
 <!-- _pages/publications.md -->
 
