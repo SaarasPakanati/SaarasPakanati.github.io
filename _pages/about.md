@@ -5,7 +5,7 @@ permalink: /
 ---
 
 <style>
-  .container { max-width: 80% !important; } 
+  .container { max-width: 70% !important; } 
   .resource-btn { margin-bottom: 8px; margin-right: 4px; display: inline-block; min-width: 100px; }
   .bio-img { width: 100%; max-width: 280px; }
   
@@ -42,7 +42,8 @@ permalink: /
     <div class="clearfix bio-content">
       <p>Hey! I am Saaras Pakanati. I am a Mechanical Engineering Senior at the University of Cincinnati (<a href="https://www.uc.edu/campaigns/points-of-pride.html">Go Bearcats!</a>), working on multiphase flows.</p>
 
-      <p>I am currently interested in exploring computational fluid dynamics and numerical techniques for optimizing simulations, with my current research spanning the experimental and computational evaluation of instabilities in liquid thin films, long-term storage of fuels in space, the development of contactless optical methods for spatio-temporal temperature measurement, and surfactant-based control of interfacial phenomena.</p>
+      <p>I am currently investigating the mechanisms of fuel evaporation both in space and on Earth. I have also had fun aiming lasers at cameras to capture temperature gradients on SiC wafers and experimenting with surfactants to play with wettability. When I am not engaged in research, I like working on quirky coding projects, such as my current one that will (ideally) simulate monarchies and their cyclical rises and falls.
+      </p>
     </div>
   </div>
 
