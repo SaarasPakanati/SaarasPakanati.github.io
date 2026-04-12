@@ -1,18 +1,35 @@
 ---
 layout: page
-# Removing the title here stops it from rendering at the top
 title: 
 permalink: /
-subtitle: <a href='https://kishanbellur.github.io/'>Undergraduate Student Researcher</a>. University of Cincinnati
 ---
 
 <style>
-  .container { max-width: 95% !important; } /* Decreases the "border" size on sides */
+  .container { max-width: 80% !important; } 
   .resource-btn { margin-bottom: 8px; margin-right: 4px; display: inline-block; min-width: 100px; }
   .bio-img { width: 100%; max-width: 280px; }
+  
+  /* Custom Heading Styles */
+  .main-name { font-size: 2.8rem; margin-bottom: 0; }
+  .main-subtitle { font-size: 1.2rem; color: #777; margin-bottom: 2rem; }
+  
+  /* Link style for the subtitle */
+  .highlight-link { color: var(--global-theme-color) !important; text-decoration: none; }
+  .highlight-link:hover { text-decoration: underline; }
 </style>
 
-<div class="row mt-4">
+
+
+<div class="row">
+  <div class="col-12">
+    <h1 class="main-name"><b>Saaras</b> Pakanati</h1>
+    <p class="main-subtitle">
+      <a href="https://kishanbellur.github.io/people/saaraspakanati" class="highlight-link">Undergraduate Student Researcher</a>. University of Cincinnati
+    </p>
+  </div>
+</div>
+
+<div class="row mt-2">
   
   <div class="col-sm-8">
     <div class="profile float-left mr-4 mb-3">
