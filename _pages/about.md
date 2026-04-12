@@ -7,7 +7,7 @@ subtitle: <a href='https://kishanbellur.github.io/'>Undergraduate Student Resear
 profile:
   align: right
   image: SaarasWebsitePic_121425.jpg
-  image_circular: true # crops the image to make it circular
+  image_circular: false # crops the image to make it circular
   more_info: >
     <p><center>Cincinnati, Ohio</center></p>
 
