@@ -1,16 +1,17 @@
 ---
 layout: page
 permalink: /research/
+title: research
 nav: true
 nav_order: 2
 ---
 
 <style>
-  /* 1. Aggressively hide the default page header and title */
-  header.post-header, h1.post-title { display: none !important; }
+  /* 1. Hides the big "research" text on the page, but keeps it in the navbar! */
+  header.post-header, .post-title { display: none !important; }
   
-  /* 2. Widen the container for this specific page */
-  .container { max-width: 70% !important; }
+  /* 2. Widens the container for this specific page */
+  .container { max-width: 95% !important; }
   
   /* 3. Standardize the header weights to match the theme */
   .publications h3 { 
@@ -19,6 +20,11 @@ nav_order: 2
     margin-bottom: 1rem; 
   }
 </style>
+
+<div class="publications">
+  <p>Please refer to my <a href="https://scholar.google.com/citations?user=N44aHPUAAAAJ&hl=en&oi=ao">Google Scholar</a> for an up-to-date publications list.</p>
+  <p><i>*Denotes equal contribution.</i></p>
+</div>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -52,11 +58,6 @@ nav_order: 2
 
 <div class="publications">
   {% include bib_search.liquid %}
-
-  <div class="publications">
-    <p>Please refer to my <a href="https://scholar.google.com/citations?user=N44aHPUAAAAJ&hl=en&oi=ao">Google Scholar</a> for an up-to-date publications list.</p>
-    <p><i>*Denotes equal contribution.</i></p>
-  </div>
   
   <h3>Peer-Reviewed Publications</h3>
   {% bibliography -f papers -q @article %}
