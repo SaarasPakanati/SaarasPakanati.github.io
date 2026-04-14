@@ -11,7 +11,7 @@ nav_order: 2
   header.post-header, .post-title { display: none !important; }
   
   /* 2. Widens the container for this specific page */
-  .container { max-width: 95% !important; }
+  .container { max-width: 70% !important; }
   
   /* 3. Standardize the header weights to match the theme */
   .publications h3 { 
