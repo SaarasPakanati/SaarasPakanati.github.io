@@ -21,11 +21,6 @@ nav_order: 2
   }
 </style>
 
-<div class="publications">
-  <p>Please refer to my <a href="https://scholar.google.com/citations?user=N44aHPUAAAAJ&hl=en&oi=ao">Google Scholar</a> for an up-to-date publications list.</p>
-  <p><i>*Denotes equal contribution.</i></p>
-</div>
-
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
@@ -58,6 +53,11 @@ nav_order: 2
 
 <div class="publications">
   {% include bib_search.liquid %}
+
+  <div class="publications">
+    <p>Please refer to my <a href="https://scholar.google.com/citations?user=N44aHPUAAAAJ&hl=en&oi=ao">Google Scholar</a> for an up-to-date publications list.</p>
+    <p><i>*Denotes equal contribution.</i></p>
+  </div>
   
   <h3>Peer-Reviewed Publications</h3>
   {% bibliography -f papers -q @article %}
