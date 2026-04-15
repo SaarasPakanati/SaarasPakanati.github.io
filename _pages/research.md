@@ -7,19 +7,34 @@ nav_order: 2
 ---
 
 <style>
-  /* 1. Hides the big "research" text on the page, but keeps it in the navbar! */
+  /* Hides the auto-generated page header */
   header.post-header, .post-title { display: none !important; }
   
-  /* 2. Widens the container for this specific page */
-  .container { max-width: 70% !important; }
+  /* Sets the content width to 70% for a cleaner look */
+  .container { 
+    max-width: 70% !important; 
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
   
-  /* 3. Standardize the header weights to match the theme */
+  /* Standardizes sub-headings */
   .publications h3 { 
     font-weight: 500 !important; 
     margin-top: 2.5rem; 
     margin-bottom: 1rem; 
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+  }
+
+  @media (max-width: 768px) {
+    .container { max-width: 95% !important; }
   }
 </style>
+
+<div class="publications">
+  <p>Please refer to my <a href="https://scholar.google.com/citations?user=N44aHPUAAAAJ&hl=en&oi=ao">Google Scholar</a> for an up-to-date publications list.</p>
+  <p><i>*Denotes equal contribution.</i></p>
+</div>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -53,11 +68,6 @@ nav_order: 2
 
 <div class="publications">
   {% include bib_search.liquid %}
-
-  <div class="publications">
-    <p>Please refer to my <a href="https://scholar.google.com/citations?user=N44aHPUAAAAJ&hl=en&oi=ao">Google Scholar</a> for an up-to-date publications list.</p>
-    <p><i>*Denotes equal contribution.</i></p>
-  </div>
   
   <h3>Peer-Reviewed Publications</h3>
   {% bibliography -f papers -q @article %}
