@@ -8,8 +8,8 @@ nav_order: 4
 ---
 
 <p class="mt-3" style="max-width: 640px;">
-  A mix of engineering tools, simulations, and research utilities — mostly MATLAB and Python.
-  Source code on <a href="https://github.com/saaraspakanati" target="_blank">GitHub</a>.
+  My open-source contributions are attached below. Some are fun, and others are even more fun.
+  All source codes are on <a href="https://github.com/saaraspakanati" target="_blank">GitHub</a>.
 </p>
 
 <div id="repo-grid" style="
