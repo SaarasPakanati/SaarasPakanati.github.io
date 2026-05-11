@@ -6,12 +6,10 @@ description: Open-source contributions and personal projects.
 nav: true
 nav_order: 4
 ---
-
 <p class="mt-3" style="max-width: 640px;">
   My open-source contributions are attached below. Some are fun, and others are even more fun.
   All source codes are on <a href="https://github.com/saaraspakanati" target="_blank">GitHub</a>.
 </p>
-
 <div id="repo-grid" style="
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -20,7 +18,6 @@ nav_order: 4
 ">
   <p id="repo-loading" style="color: gray; font-size: 0.9rem;">Loading repositories…</p>
 </div>
-
 <script>
 (async () => {
   const grid = document.getElementById('repo-grid');
@@ -32,15 +29,25 @@ nav_order: 4
     'stirling-engine-analysis',
   ];
 
-  try {
-    const res = await fetch('https://api.github.com/users/saaraspakanati/repos?per_page=50&sort=updated');
-    const repos = await res.json();
+  const externalPinned = [
+    'https://api.github.com/repos/UC-Lab-For-Interfacial-Dynamics/EMEM',
+  ];
 
-    if (!Array.isArray(repos)) throw new Error('Bad response');
+  try {
+    const [personalRes, ...externalRes] = await Promise.all([
+      fetch('https://api.github.com/users/saaraspakanati/repos?per_page=50&sort=updated'),
+      ...externalPinned.map(url => fetch(url)),
+    ]);
+
+    const personalRepos = await personalRes.json();
+    const externalRepos = await Promise.all(externalRes.map(r => r.json()));
+
+    if (!Array.isArray(personalRepos)) throw new Error('Bad response');
 
     const sorted = [
-      ...repos.filter(r => pinnedFirst.includes(r.name)),
-      ...repos.filter(r => !pinnedFirst.includes(r.name) && !r.fork && !r.archived),
+      ...externalRepos,
+      ...personalRepos.filter(r => pinnedFirst.includes(r.name)),
+      ...personalRepos.filter(r => !pinnedFirst.includes(r.name) && !r.fork && !r.archived),
     ];
 
     loading.remove();
@@ -86,7 +93,7 @@ nav_order: 4
     });
 
   } catch (e) {
-    loading.textContent = 'Could not load repositories. Visit github.com/saaraspakanati directly.';
+    loading.textContent = 'Could not load repositories, Sorry! Please visit github.com/saaraspakanati directly.';
   }
 })();
 </script>
