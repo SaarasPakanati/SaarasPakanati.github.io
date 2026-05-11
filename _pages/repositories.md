@@ -23,15 +23,32 @@ nav_order: 4
   const grid = document.getElementById('repo-grid');
   const loading = document.getElementById('repo-loading');
 
+  // ── PINNED PERSONAL REPOS (shown first, in this order) ──────────────────
   const pinnedFirst = [
-    'cryogenic-evaporation-model',
-    'ising-model-mcmc',
-    'stirling-engine-analysis',
+    'SaarasPakanati.github.io',
+    'One-Dimensional-Heat-Transfer-FDM-Code',
+    'W04-Droplet-Evaporation-Simulator',
   ];
 
+  // ── ALLOWLIST (only these personal repos will appear at all) ────────────
+  const allowlist = [
+    'SaarasPakanati.github.io',
+    'One-Dimensional-Heat-Transfer-FDM-Code',
+    'W04-Droplet-Evaporation-Simulator',
+  ];
+
+  // ── EXTERNAL REPOS from other orgs (always pinned at the very top) ──────
   const externalPinned = [
     'https://api.github.com/repos/UC-Lab-For-Interfacial-Dynamics/EMEM',
   ];
+
+  // ── CUSTOM DESCRIPTIONS (overrides the GitHub About description) ─────────
+  const descriptions = {
+    'EMEM': 'CFD solver for evaporating menisci in cryogenic systems, developed by the University of Cincinnati Lab for Interfacial Dynamics.',
+    'SaarasPakanati.github.io': 'The source code for the website you are currently using!',
+    'One-Dimensional-Heat-Transfer-FDM-Code': 'MATLAB Analysis of the Stability and Application of Finite Difference Methods in Heat Transfer Problems',
+    'W04-Droplet-Evaporation-Simulator': 'PI Control for Maintaining Constant Droplet Size During Evaporation Using MATLAB',
+  };
 
   try {
     const [personalRes, ...externalRes] = await Promise.all([
@@ -47,7 +64,7 @@ nav_order: 4
     const sorted = [
       ...externalRepos,
       ...personalRepos.filter(r => pinnedFirst.includes(r.name)),
-      ...personalRepos.filter(r => !pinnedFirst.includes(r.name) && !r.fork && !r.archived),
+      ...personalRepos.filter(r => allowlist.includes(r.name) && !pinnedFirst.includes(r.name)),
     ];
 
     loading.remove();
@@ -77,7 +94,7 @@ nav_order: 4
           </a>
         </div>
         <p style="font-size: 0.82rem; color: var(--global-text-color-light, #555); margin: 0; flex: 1;">
-          ${repo.description || '<em style="opacity:0.5">No description</em>'}
+          ${descriptions[repo.name] || repo.description || '<em style="opacity:0.5">No description</em>'}
         </p>
         <div style="display: flex; align-items: center; gap: 1rem; font-size: 0.78rem; color: var(--global-text-color-light, #777); margin-top: 0.25rem;">
           ${repo.language ? `
@@ -93,7 +110,7 @@ nav_order: 4
     });
 
   } catch (e) {
-    loading.textContent = 'Could not load repositories, Sorry! Please visit github.com/saaraspakanati directly.';
+    loading.textContent = 'Could not load repositories. Visit github.com/saaraspakanati directly.';
   }
 })();
 </script>
