@@ -2,15 +2,91 @@
 layout: page
 permalink: /repositories/
 title: repositories
-description: Check out all my open-source contributions/personal projects!
+description: Open-source contributions and personal projects.
 nav: true
 nav_order: 4
 ---
 
-## GitHub Repositories
+<p class="mt-3" style="max-width: 640px;">
+  A mix of engineering tools, simulations, and research utilities — mostly MATLAB and Python.
+  Source code on <a href="https://github.com/saaraspakanati" target="_blank">GitHub</a>.
+</p>
 
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% for repo in site.data.repositories.github_repos %}
-    {% include repository/repo.liquid repository=repo %}
-  {% endfor %}
+<div id="repo-grid" style="
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+">
+  <p id="repo-loading" style="color: gray; font-size: 0.9rem;">Loading repositories…</p>
 </div>
+
+<script>
+(async () => {
+  const grid = document.getElementById('repo-grid');
+  const loading = document.getElementById('repo-loading');
+
+  const pinnedFirst = [
+    'cryogenic-evaporation-model',
+    'ising-model-mcmc',
+    'stirling-engine-analysis',
+  ];
+
+  try {
+    const res = await fetch('https://api.github.com/users/saaraspakanati/repos?per_page=50&sort=updated');
+    const repos = await res.json();
+
+    if (!Array.isArray(repos)) throw new Error('Bad response');
+
+    const sorted = [
+      ...repos.filter(r => pinnedFirst.includes(r.name)),
+      ...repos.filter(r => !pinnedFirst.includes(r.name) && !r.fork && !r.archived),
+    ];
+
+    loading.remove();
+
+    const langColors = {
+      MATLAB: '#e16737', Python: '#3572A5', JavaScript: '#f1e05a',
+      'C++': '#f34b7d', HTML: '#e44b23', Shell: '#89e051',
+    };
+
+    sorted.forEach(repo => {
+      const color = langColors[repo.language] || '#888';
+      const card = document.createElement('div');
+      card.style.cssText = `
+        background: var(--global-bg-color, #fff);
+        border: 1px solid var(--global-divider-color, #e0e0e0);
+        border-radius: 8px;
+        padding: 1rem 1.1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      `;
+      card.innerHTML = `
+        <div>
+          <a href="${repo.html_url}" target="_blank" rel="noopener"
+             style="font-weight: 600; font-size: 0.95rem; text-decoration: none;">
+            ${repo.name}
+          </a>
+        </div>
+        <p style="font-size: 0.82rem; color: var(--global-text-color-light, #555); margin: 0; flex: 1;">
+          ${repo.description || '<em style="opacity:0.5">No description</em>'}
+        </p>
+        <div style="display: flex; align-items: center; gap: 1rem; font-size: 0.78rem; color: var(--global-text-color-light, #777); margin-top: 0.25rem;">
+          ${repo.language ? `
+            <span style="display:flex; align-items:center; gap: 4px;">
+              <span style="width:10px; height:10px; border-radius:50%; background:${color}; display:inline-block;"></span>
+              ${repo.language}
+            </span>` : ''}
+          ${repo.stargazers_count > 0 ? `<span>★ ${repo.stargazers_count}</span>` : ''}
+          ${repo.forks_count > 0 ? `<span>⑂ ${repo.forks_count}</span>` : ''}
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+
+  } catch (e) {
+    loading.textContent = 'Could not load repositories. Visit github.com/saaraspakanati directly.';
+  }
+})();
+</script>
