@@ -70,11 +70,11 @@ nav_order: 2
   {% include bib_search.liquid %}
   
   <h3>Peer-Reviewed Publications</h3>
-  {% bibliography -f papers -q @article %}
+  {% bibliography -f papers -q @article --sort_by year --order descending%}
 
   <h3>Conference & Poster Presentations</h3>
-  {% bibliography -f papers -q @inproceedings %}
+  {% bibliography -f papers -q @inproceedings --sort_by year --order descending%}
 
   <h3>Outreach & Invited Talks</h3>
-  {% bibliography -f papers -q @misc %}
+  {% bibliography -f papers -q @misc --sort_by year --order descending%}
 </div>
