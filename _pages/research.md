@@ -60,7 +60,7 @@ nav_order: 2
 
   <h3>Conference & Poster Presentations</h3>
   <div id="talks-map"></div>
-  <p class="map-caption">Pins mark conference and poster presentation venues.</p>
+  <p class="map-caption">Pins mark conference, poster and invited presentation venues.</p>
   {% bibliography -f papers -q @inproceedings --sort_by year --order descending %}
 
   <h3>Outreach & Invited Talks</h3>
