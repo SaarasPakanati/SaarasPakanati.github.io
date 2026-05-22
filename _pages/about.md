@@ -3,22 +3,17 @@ layout: page
 title: 
 permalink: /
 ---
-
 <style>
   .container { max-width: 70% !important; } 
   .resource-btn { margin-bottom: 8px; margin-right: 4px; display: inline-block; min-width: 100px; }
   .bio-img { width: 100%; max-width: 280px; }
   
-  /* Custom Heading Styles */
   .main-name { font-size: 2.8rem; margin-bottom: 0; }
   .main-subtitle { font-size: 1.2rem; color: #777; margin-bottom: 2rem; }
   
-  /* Link style for the subtitle */
   .highlight-link { color: var(--global-theme-color) !important; text-decoration: none; }
   .highlight-link:hover { text-decoration: underline; }
 </style>
-
-
 
 <div class="row">
   <div class="col-12">
@@ -30,21 +25,17 @@ permalink: /
 </div>
 
 <div class="row mt-2">
-  
   <div class="col-sm-8">
     <div class="profile float-left mr-4 mb-3">
       <img src="{{ 'assets/img/SaarasWebsitePic_052226.jpg' | relative_url }}" class="img-fluid z-depth-1 rounded bio-img">
     </div>
-
     <div class="clearfix bio-content">
       <p>Hey! I am Saaras Pakanati, an incoming PhD student in Mechanical Engineering at Rice University, advised by Dr. Daniel Preston.</p>
-
       <p>I previously worked as an undergraduate research assistant at the <a href="https://kishanbellur.github.io">UC Lab for Interfacial Dynamics</a>, advised by Dr. Kishan Bellur, studying fuel evaporation in space and thermally sensitive surfactant-based interfacial control.</p>
     </div>
   </div>
 
   <div class="col-sm-4 border-left pl-4">
-    
     <div class="resources-section mb-4">
       <h5 class="font-weight-bold mb-3">Resources</h5>
       <div class="d-flex flex-wrap">
@@ -59,9 +50,7 @@ permalink: /
         </a>
       </div>
     </div>
-
     <hr>
-
     <div class="posts-sidebar mt-4">
       <h5 class="font-weight-bold mb-3">Latest Posts</h5>
       {% if site.posts.size > 0 %}
@@ -78,13 +67,13 @@ permalink: /
         <p class="text-muted" style="font-size: 0.9rem;">No posts yet.</p>
       {% endif %}
     </div>
-    
   </div>
+</div>
 
-  ##### Latest Publication
-
-  {% bibliography -f papers -q @article --sort_by year --order descending --max 1 %}
-  
-  <p style="font-size: 0.85rem;"><a href="/research/">View all publications →</a></p>
-
+<div class="row mt-4">
+  <div class="col-12">
+    <h5 class="font-weight-bold mb-3">Latest Publication</h5>
+    {% bibliography -f papers --max 1 %}
+    <p style="font-size: 0.85rem;"><a href="/research/">View all publications →</a></p>
+  </div>
 </div>
