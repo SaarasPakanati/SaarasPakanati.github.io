@@ -76,7 +76,7 @@ permalink: /
 
 <div class="row mt-4">
   <div class="col-12">
-    <h5 class="font-weight-bold mb-3">Latest Publication</h5>
+    <h6 class="font-weight-bold mb-3">Latest Publication</h6>
     <div class="publications latest-publication">
       {% bibliography -f papers -q @article --sort_by year --order descending %}
     </div>
