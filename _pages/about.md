@@ -24,7 +24,7 @@ permalink: /
   <div class="col-12">
     <h1 class="main-name"><b>Saaras</b> Pakanati</h1>
     <p class="main-subtitle">
-      <a href="https://kishanbellur.github.io/people/saaraspakanati" class="highlight-link">Undergraduate Student Researcher</a>. University of Cincinnati
+      <a href="https://pi.rice.edu" class="highlight-link">Incoming PhD Student</a>. Rice University
     </p>
   </div>
 </div>
@@ -33,17 +33,13 @@ permalink: /
   
   <div class="col-sm-8">
     <div class="profile float-left mr-4 mb-3">
-      <img src="{{ 'assets/img/SaarasWebsitePic_121425.jpg' | relative_url }}" class="img-fluid z-depth-1 rounded bio-img">
-      <div class="address mt-2 text-center" style="font-size: 0.85rem; color: #888;">
-        Cincinnati, Ohio
-      </div>
+      <img src="{{ 'assets/img/SaarasWebsitePic_052226.jpg' | relative_url }}" class="img-fluid z-depth-1 rounded bio-img">
     </div>
 
     <div class="clearfix bio-content">
-      <p>Hey! I am Saaras Pakanati. I am a Mechanical Engineering Senior at the University of Cincinnati (<a href="https://www.uc.edu/campaigns/points-of-pride.html">Go Bearcats!</a>), working on multiphase flows.</p>
+      <p>Hey! I am Saaras Pakanati, an incoming PhD student in Mechanical Engineering at Rice University, advised by Dr. Daniel Preston.</p>
 
-      <p>I am currently investigating the mechanisms of fuel evaporation both in space and on Earth. I have also had fun aiming lasers at cameras to capture temperature gradients on SiC wafers and experimenting with surfactants to play with wettability. When I am not engaged in research, I like working on quirky coding projects, such as my current one that will (ideally) simulate monarchies and their cyclical rises and falls.
-      </p>
+      <p>I previously worked as an undergraduate research assistant at the (<a href="https://kishanbellur.github.io ">UC Lab for Interfacial Dynamics</a>, advised by Dr. Kishan Bellur, studying fuel evaporation in space and thermally sensitive surfactant-based interfacial control.</p>
     </div>
   </div>
 
