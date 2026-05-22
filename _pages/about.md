@@ -14,9 +14,9 @@ permalink: /
   .highlight-link { color: var(--global-theme-color) !important; text-decoration: none; }
   .highlight-link:hover { text-decoration: underline; }
 
-  /* Show only the first publication entry */
-  .latest-publication ol.bibliography li:not(:first-child) { display: none; }
-  .latest-publication h2.year { display: none; }
+  /* Hide year header and all entries after the first */
+  .latest-publication h2 { display: none !important; }
+  .latest-publication ol.bibliography li:not(:first-child) { display: none !important; }
 </style>
 
 <div class="row">
@@ -77,7 +77,7 @@ permalink: /
 <div class="row mt-4">
   <div class="col-12">
     <h5 class="font-weight-bold mb-3">Latest Publication</h5>
-    <div class="latest-publication">
+    <div class="publications latest-publication">
       {% bibliography -f papers -q @article --sort_by year --order descending %}
     </div>
     <p style="font-size: 0.85rem;"><a href="/research/">View all publications →</a></p>
