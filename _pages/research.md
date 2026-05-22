@@ -31,16 +31,11 @@ nav_order: 2
   }
 </style>
 
-<div class="publications">
-  <p>Please refer to my <a href="https://scholar.google.com/citations?user=N44aHPUAAAAJ&hl=en&oi=ao">Google Scholar</a> for an up-to-date publications list.</p>
-  <p><i>*Denotes equal contribution.</i></p>
-</div>
-
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <div class="publications">
-  <h3>Where my work has been presented</h3>
+  <h6>Where my work has been presented</h6>
   <div id="talks-map" style="height: 350px; width: 100%; border-radius: 8px; border: 1px solid #ddd; margin-bottom: 20px; z-index: 1;"></div>
 </div>
 
@@ -65,6 +60,11 @@ nav_order: 2
     });
   });
 </script>
+
+<div class="publications">
+  <p>Please refer to my <a href="https://scholar.google.com/citations?user=N44aHPUAAAAJ&hl=en&oi=ao">Google Scholar</a> for an up-to-date publications list.</p>
+  <p><i>*Denotes equal contribution.</i></p>
+</div>
 
 <div class="publications">
   {% include bib_search.liquid %}
