@@ -81,4 +81,10 @@ permalink: /
     
   </div>
 
+  ##### Latest Publication
+
+  {% bibliography -f papers -q @article --sort_by year --order descending --max 1 %}
+  
+  <p style="font-size: 0.85rem;"><a href="/research/">View all publications →</a></p>
+
 </div>
