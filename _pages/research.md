@@ -58,14 +58,15 @@ nav_order: 2
   <h3>Peer-Reviewed Publications</h3>
   {% bibliography -f papers -q @article --sort_by year --order descending %}
 
-  <div id="talks-map"></div>
-  <p class="map-caption">Pins mark conference, poster and invited presentation venues.</p>
-
   <h3>Conference & Poster Presentations</h3>
   {% bibliography -f papers -q @inproceedings --sort_by year --order descending %}
 
   <h3>Outreach & Invited Talks</h3>
   {% bibliography -f papers -q @misc --sort_by year --order descending %}
+
+  <div id="talks-map"></div>
+  <p class="map-caption">Pins mark conference, poster and invited presentation venues.</p>
+  
 </div>
 
 <script>
