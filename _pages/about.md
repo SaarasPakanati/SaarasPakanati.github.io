@@ -29,7 +29,7 @@ permalink: /
 
   /* Text weight */
   .bio-content p { font-weight: 400; }
-  .bio-content, .resources-section, .latest-publication { font-weight: 500; }
+  .latest-publication, .latest-publication * { font-weight: 400 !important; }
 </style>
 <div class="row">
   <div class="col-12">
