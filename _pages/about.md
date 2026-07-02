@@ -13,10 +13,23 @@ permalink: /
   
   .highlight-link { color: var(--global-theme-color) !important; text-decoration: none; }
   .highlight-link:hover { text-decoration: underline; }
+
   /* Hide year header and all entries after the first */
   .latest-publication h2 { display: none !important; }
   .latest-publication ol.bibliography li:not(:first-child) { display: none !important; }
   .latest-publication ol.bibliography { padding-left: 0; margin-bottom: 0.5rem; }
+  .latest-publication img { display: none !important; }
+
+  /* Fix publication width to match sidebar */
+  .latest-publication .row { margin-left: 0; margin-right: 0; }
+  .latest-publication .col-sm-2,
+  .latest-publication .col-sm-10,
+  .latest-publication [class*="col-"] { padding-left: 0; padding-right: 0; max-width: 100%; flex: 0 0 100%; }
+  .latest-publication ol.bibliography li { padding-left: 0; margin-left: 0; }
+
+  /* Text weight */
+  .bio-content p { font-weight: 400; }
+  .bio-content, .resources-section, .latest-publication { font-weight: 500; }
 </style>
 <div class="row">
   <div class="col-12">
