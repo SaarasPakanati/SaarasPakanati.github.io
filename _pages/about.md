@@ -19,9 +19,11 @@ permalink: /
   .latest-publication ol.bibliography li:not(:first-child) { display: none !important; }
   .latest-publication ol.bibliography { padding-left: 0; margin-bottom: 0.5rem; }
   .latest-publication img { display: none !important; }
-  .latest-publication .periodical,
-  .latest-publication .journal,
-  .latest-publication em { display: none !important; }
+
+  /* Hide journal abbreviation badge */
+  .latest-publication .abbr,
+  .latest-publication .badge,
+  .latest-publication abbr { display: none !important; }
 
   /* Fix publication width to match sidebar */
   .latest-publication .row { margin-left: 0; margin-right: 0; }
@@ -34,6 +36,7 @@ permalink: /
   .bio-content p { font-weight: 400; }
   .latest-publication, .latest-publication * { font-weight: 400 !important; }
 </style>
+
 <div class="row">
   <div class="col-12">
     <h1 class="main-name"><b>Saaras</b> Pakanati</h1>
