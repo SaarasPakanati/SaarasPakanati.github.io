@@ -13,12 +13,11 @@ permalink: /
   
   .highlight-link { color: var(--global-theme-color) !important; text-decoration: none; }
   .highlight-link:hover { text-decoration: underline; }
-
   /* Hide year header and all entries after the first */
   .latest-publication h2 { display: none !important; }
   .latest-publication ol.bibliography li:not(:first-child) { display: none !important; }
+  .latest-publication ol.bibliography { padding-left: 0; margin-bottom: 0.5rem; }
 </style>
-
 <div class="row">
   <div class="col-12">
     <h1 class="main-name"><b>Saaras</b> Pakanati</h1>
@@ -27,7 +26,6 @@ permalink: /
     </p>
   </div>
 </div>
-
 <div class="row mt-2">
   <div class="col-sm-8">
     <div class="profile float-left mr-4 mb-3">
@@ -38,7 +36,6 @@ permalink: /
       <p>I previously worked as an undergraduate research assistant at the <a href="https://kishanbellur.github.io">UC Lab for Interfacial Dynamics</a>, advised by Dr. Kishan Bellur, studying fuel evaporation in space and thermally sensitive surfactant-based interfacial control.</p>
     </div>
   </div>
-
   <div class="col-sm-4 border-left pl-4">
     <div class="resources-section mb-4">
       <h5 class="font-weight-bold mb-3">Resources</h5>
@@ -55,31 +52,12 @@ permalink: /
       </div>
     </div>
     <hr>
-    <div class="posts-sidebar mt-4">
-      <h5 class="font-weight-bold mb-3">Latest Posts</h5>
-      {% if site.posts.size > 0 %}
-        <ul style="list-style-type: none; padding-left: 0;">
-          {% for post in site.posts limit:3 %}
-            <li class="mb-2">
-              <a href="{{ post.url | relative_url }}" style="color: var(--global-theme-color); font-weight: 500; font-size: 0.95rem;">{{ post.title }}</a>
-              <br>
-              <small class="text-muted">{{ post.date | date: "%b %d, %Y" }}</small>
-            </li>
-          {% endfor %}
-        </ul>
-      {% else %}
-        <p class="text-muted" style="font-size: 0.9rem;">No posts yet.</p>
-      {% endif %}
+    <div class="mt-4">
+      <h5 class="font-weight-bold mb-3">Latest Publication</h5>
+      <div class="publications latest-publication">
+        {% bibliography -f papers -q @article --sort_by year --order descending %}
+      </div>
+      <p style="font-size: 0.85rem;"><a href="/research/">View all publications →</a></p>
     </div>
-  </div>
-</div>
-
-<div class="row mt-4">
-  <div class="col-12">
-    <h6 class="font-weight-bold mb-3">Latest Publication</h6>
-    <div class="publications latest-publication">
-      {% bibliography -f papers -q @article --sort_by year --order descending %}
-    </div>
-    <p style="font-size: 0.85rem;"><a href="/research/">View all publications →</a></p>
   </div>
 </div>
