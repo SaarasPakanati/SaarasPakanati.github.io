@@ -19,6 +19,9 @@ permalink: /
   .latest-publication ol.bibliography li:not(:first-child) { display: none !important; }
   .latest-publication ol.bibliography { padding-left: 0; margin-bottom: 0.5rem; }
   .latest-publication img { display: none !important; }
+  .latest-publication .periodical,
+  .latest-publication .journal,
+  .latest-publication em { display: none !important; }
 
   /* Fix publication width to match sidebar */
   .latest-publication .row { margin-left: 0; margin-right: 0; }
