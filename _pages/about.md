@@ -6,7 +6,7 @@ permalink: /
 <style>
   .container { max-width: 70% !important; } 
   .resource-btn { margin-bottom: 8px; margin-right: 4px; display: inline-block; min-width: 100px; }
-  .bio-img { width: 100%; max-width: 280px; }
+  .bio-img { width: 100%; max-width: 380px; }
 
   .main-name { font-size: 2.8rem; margin-bottom: 0; }
   .main-subtitle { font-size: 1.2rem; color: #777; margin-bottom: 2rem; }
@@ -24,8 +24,8 @@ permalink: /
   .latest-publication .abbr,
   .latest-publication .badge,
   .latest-publication abbr { display: none !important; }
-  /
-  * Fix publication width to match sidebar */
+  
+  /* Fix publication width to match sidebar */
   .latest-publication .row { margin-left: 0; margin-right: 0; }
   .latest-publication .col-sm-2,
   .latest-publication .col-sm-10,
