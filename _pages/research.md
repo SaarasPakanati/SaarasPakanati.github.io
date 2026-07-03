@@ -9,7 +9,7 @@ nav_order: 2
   header.post-header, .post-title { display: none !important; }
   
   .container { 
-    max-width: 70% !important; 
+    max-width: 80% !important; 
     margin-left: auto !important;
     margin-right: auto !important;
   }
