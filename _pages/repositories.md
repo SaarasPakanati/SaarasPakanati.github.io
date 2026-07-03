@@ -7,7 +7,12 @@ nav: true
 nav_order: 4
 ---
 <style>
-  .container { max-width: 80% !important; }
+  body .container,
+  main .container,
+  .container {
+    max-width: 80% !important;
+    width: 80% !important;
+  }
 </style>
 <p class="mt-3" style="max-width: 640px;">
   My open-source contributions are attached below. Some are fun, and others are even more fun.
