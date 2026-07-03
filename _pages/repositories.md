@@ -6,6 +6,9 @@ description: Open-source contributions and personal projects.
 nav: true
 nav_order: 4
 ---
+<style>
+  .container { max-width: 80% !important; }
+</style>
 <p class="mt-3" style="max-width: 640px;">
   My open-source contributions are attached below. Some are fun, and others are even more fun.
   All source codes are on <a href="https://github.com/saaraspakanati" target="_blank">GitHub</a>.
@@ -23,26 +26,22 @@ nav_order: 4
   const grid = document.getElementById('repo-grid');
   const loading = document.getElementById('repo-loading');
 
-  // ── PINNED PERSONAL REPOS (shown first, in this order) ──────────────────
   const pinnedFirst = [
     'SaarasPakanati.github.io',
     'One-Dimensional-Heat-Transfer-FDM-Code',
     'W04-Droplet-Evaporation-Simulator',
   ];
 
-  // ── ALLOWLIST (only these personal repos will appear at all) ────────────
   const allowlist = [
     'SaarasPakanati.github.io',
     'One-Dimensional-Heat-Transfer-FDM-Code',
     'W04-Droplet-Evaporation-Simulator',
   ];
 
-  // ── EXTERNAL REPOS from other orgs (always pinned at the very top) ──────
   const externalPinned = [
     'https://api.github.com/repos/UC-Lab-For-Interfacial-Dynamics/EMEM',
   ];
 
-  // ── CUSTOM DESCRIPTIONS (overrides the GitHub About description) ─────────
   const descriptions = {
     'EMEM': 'CFD solver for evaporating menisci in cryogenic systems, developed by the University of Cincinnati Lab for Interfacial Dynamics.',
     'SaarasPakanati.github.io': 'The source code for the website you are currently using!',
