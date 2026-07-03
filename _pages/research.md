@@ -22,6 +22,25 @@ nav_order: 2
     padding-bottom: 5px;
   }
 
+  .pub-meta-line {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 1.5rem;
+  }
+  .pub-meta-line a {
+    color: var(--global-theme-color);
+  }
+  .pub-meta-line .divider {
+    margin: 0 8px;
+    color: #ccc;
+  }
+
+  .publications input[type="text"],
+  .publications input[type="search"] {
+    max-width: 400px;
+    width: 100%;
+  }
+
   #talks-map {
     height: 350px;
     width: 100%;
@@ -31,13 +50,57 @@ nav_order: 2
     margin-bottom: 24px;
     z-index: 1;
   }
-
   .map-caption {
     font-size: 0.82rem;
     color: #888;
     margin-top: -18px;
     margin-bottom: 24px;
     font-style: italic;
+  }
+  @media (max-width: 768px) {
+    .container { max-width: 95% !important; }
+  }
+</style>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<div class="publications">
+  <p class="pub-meta-line">
+    Full list on <a href="https://scholar.google.com/citations?user=N44aHPUAAAAJ&hl=en&oi=ao">Google Scholar ↗</a>
+    <span class="divider">·</span>
+    <i>* denotes equal contribution</i>
+  </p>
+
+  {% include bib_search.liquid %}
+
+  <h3>Peer-Reviewed Publications</h3>
+  {% bibliography -f papers -q @article --sort_by year --order descending %}
+  <h3>Conference & Poster Presentations</h3>
+  {% bibliography -f papers -q @inproceedings --sort_by year --order descending %}
+  <h3>Outreach & Invited Talks</h3>
+  {% bibliography -f papers -q @misc --sort_by year --order descending %}
+  <div id="talks-map"></div>
+  <p class="map-caption">Pins mark conference, poster and invited presentation venues.</p>
+  
+</div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var map = L.map('talks-map').setView([39.8283, -98.5795], 4);
+    
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap'
+    }).addTo(map);
+    var locations = [
+      { name: "University of Cincinnati (Multiple Talks), Cincinnati OH", coords: [39.1329, -84.5150] },
+      { name: "ASME IMECE 2025, Memphis TN", coords: [35.15200281608736, -90.05101930172134] },
+      { name: "ASTFE 2026, Tempe AZ", coords: [33.423117434733776, -111.92745227008359] },
+      { name: "MUFMECH 2025, Rochester IN", coords: [41.06446118348553, -86.21701802940963] },
+      { name: "MUFMECH 2026, Cedar Lake IN", coords: [41.36416165394076, -87.44475850132815] }
+    ];
+    locations.forEach(function(loc) {
+      L.marker(loc.coords).addTo(map).bindPopup("<b>" + loc.name + "</b>");
+    });
+  });
+</script>    font-style: italic;
   }
 
   @media (max-width: 768px) {
