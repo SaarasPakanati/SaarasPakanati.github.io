@@ -6,7 +6,7 @@ permalink: /
 <style>
   .container { max-width: 70% !important; } 
   .resource-btn { margin-bottom: 8px; margin-right: 4px; display: inline-block; min-width: 100px; }
-  .bio-img { width: 100%; max-width: 380px; }
+  .bio-img { width: 100%; max-width: 280px; }
 
   .main-name { font-size: 2.8rem; margin-bottom: 0; }
   .main-subtitle { font-size: 1.2rem; color: #777; margin-bottom: 2rem; }
