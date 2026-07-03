@@ -4,7 +4,7 @@ title:
 permalink: /
 ---
 <style>
-  .container { max-width: 70% !important; } 
+  .container { max-width: 85% !important; } 
   .resource-btn { margin-bottom: 8px; margin-right: 4px; display: inline-block; min-width: 100px; }
   .bio-img { width: 100%; max-width: 380px; }
 
@@ -33,8 +33,8 @@ permalink: /
   .latest-publication ol.bibliography li { padding-left: 0; margin-left: 0; }
   
   /* Text weight */
-  .bio-content p { font-weight: 400; }
-  .latest-publication, .latest-publication * { font-weight: 400 !important; }
+  .bio-content p { font-weight: 200; }
+  .latest-publication, .latest-publication * { font-weight: 200 !important; }
 </style>
 
 <div class="row">
