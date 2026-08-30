@@ -41,7 +41,7 @@ permalink: /
   <div class="col-12">
     <h1 class="main-name"><b>Saaras</b> Pakanati</h1>
     <p class="main-subtitle">
-      <a href="https://pi.rice.edu" class="highlight-link">Incoming PhD Student</a>. Rice University
+      <a href="https://pi.rice.edu" class="highlight-link">PhD Student</a>. Rice University
     </p>
   </div>
 </div>
