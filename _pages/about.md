@@ -51,8 +51,8 @@ permalink: /
       <img src="{{ 'assets/img/SaarasWebsitePic_052226.jpg' | relative_url }}" class="img-fluid z-depth-1 rounded bio-img">
     </div>
     <div class="clearfix bio-content">
-      <p>Hey! I am Saaras Pakanati, an incoming PhD student in Mechanical Engineering at Rice University, advised by Dr. Daniel Preston.</p>
-      <p>I previously worked as an undergraduate research assistant at the <a href="https://kishanbellur.github.io">UC Lab for Interfacial Dynamics</a>, advised by Dr. Kishan Bellur, studying fuel evaporation in space and thermally sensitive surfactant-based interfacial control.</p>
+      <p>Hey! I am Saaras Pakanati, a PhD student in Mechanical Engineering at Rice University, advised by Prof. Daniel Preston.</p>
+      <p>I previously worked as an undergraduate research assistant at the <a href="https://kishanbellur.github.io">UC Lab for Interfacial Dynamics</a>, advised by Prof. Kishan Bellur, studying fuel evaporation in space and thermally sensitive surfactant-based interfacial control.</p>
     </div>
   </div>
   <div class="col-sm-4 border-left pl-4">
