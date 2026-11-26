@@ -87,7 +87,6 @@ nav_order: 2
     var locations = [
       { name: "University of Cincinnati (Multiple Talks), Cincinnati OH", coords: [39.1329, -84.5150] },
       { name: "ASME IMECE 2025, Memphis TN", coords: [35.15200281608736, -90.05101930172134] },
-      { name: "ASTFE 2026, Tempe AZ", coords: [33.423117434733776, -111.92745227008359] },
       { name: "MUFMECH 2025, Rochester IN", coords: [41.06446118348553, -86.21701802940963] },
       { name: "MUFMECH 2026, Cedar Lake IN", coords: [41.36416165394076, -87.44475850132815] }
     ];
